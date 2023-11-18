@@ -1,0 +1,25 @@
+.block {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    padding: 10px;
+  }
+  .block-medium {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .block-long {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  ion-modal {
+    --height: auto;
+  }

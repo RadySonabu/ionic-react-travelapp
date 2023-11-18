@@ -1,9 +1,14 @@
-import { IonAvatar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonImg, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonAvatar, IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonImg, IonModal, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 import { IonIcon } from '@ionic/react';
 import { logoIonic } from 'ionicons/icons';
-const Tab1: React.FC = () => (
+import { useRef, useState } from 'react';
+const Tab1: React.FC = () => {
+  
+  const modal = useRef<HTMLIonModalElement>(null);
+  return (
+  
   <IonPage>
     <img
       src="https://res.klook.com/image/upload/c_fill,w_750,h_560/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/lkrts1fjoxp0q1hivhr8.jpg"
@@ -12,64 +17,55 @@ const Tab1: React.FC = () => (
     ></img>
     <IonHeader>
         <IonToolbar color={'success'}>
-          <IonTitle class='ion-color-success-shade  '>
-          
+          <IonTitle class='ion-color-success-shade'>
             BeCool Travels</IonTitle>
         </IonToolbar>
     </IonHeader>
     <IonContent>
+    <IonButton color={'success'} id="open-modal" expand="block">
+          History
+    </IonButton>
+    <IonButton color={'success'} id="open-modal2" expand="block">
+          Geography
+    </IonButton>
+    <IonButton color={'success'} id="open-modal3" expand="block">
+          Fact's and Figures
+    </IonButton>
+    <IonButton color={'success'} id="open-modal4" expand="block">
+          Municipalities
+    </IonButton>
+    <IonModal ref={modal} trigger="open-modal" initialBreakpoint={1} breakpoints={[0, 1]}>
+      <div className="block">
+      The province of Albay is located in the Bicol region of the Philippines. It is the capital of Legazpi. The province contains one of the finest scenery in the world, particularly its famous Mayon Volcano, which is renowned for its cone-perfect shape. Mayon is a major tourist attraction and an active stratovolcano. The islands of Albay are characterized by splendid greenness, natural wonders, and glorious beaches along their coast. There is a rich cultural heritage in this province, where many festivals are held throughout the year. In particular, the Magayon Festival pays tribute to the beauty of the Mayon Volcano, which is a major cultural event for the people of Albay. In economic terms, Albay is primarily an agricultural area, with rice, coconut, and abaca being some of the main crops. Due to its location on the coast of the province, fishing is also an important sector.
+      </div>
+    </IonModal>
+    <IonModal ref={modal} trigger="open-modal2" initialBreakpoint={1} breakpoints={[0, 1]}>
+      <div className="block">
+        <img
+          src="https://res.klook.com/image/upload/c_fill,w_750,h_560/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/lkrts1fjoxp0q1hivhr8.jpg"
+          alt="The Wisconsin State Capitol building in Madison, WI at night"
+          className=''
+        ></img>
+      </div>
+    </IonModal>
+    <IonModal ref={modal} trigger="open-modal3" initialBreakpoint={1} breakpoints={[0, 1]}>
+      <div className="block">
+        <img
+          src="https://res.klook.com/image/upload/c_fill,w_750,h_560/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/lkrts1fjoxp0q1hivhr8.jpg"
+          alt="The Wisconsin State Capitol building in Madison, WI at night"
+          className=''
+        ></img>
+      </div>
+    </IonModal>
+    <IonModal ref={modal} trigger="open-modal4" initialBreakpoint={1} breakpoints={[0, 1]}>
+      <div className="block">
+      <p>Bicol Region is composed of four contiguous provinces: Albay, Camarines Sur, Camarines Norte, and Sorsogon; two island provinces of Catanduanes and Masbate; and seven cities namely, Legazpi, Naga, Iriga, Tabaco, Ligao, Sorsogon, and Masbate.</p>
+      </div>
+    </IonModal>
     
-    <div className="ion-padding ">
-        <h1>Scroll the content and notice that the text goes behind the header and footer.</h1>
-
-        <p className="blurred-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed tellus nec mauris auctor dignissim
-          fermentum in risus. Sed nec convallis sapien, id tincidunt enim. Mauris ornare eleifend nunc id mattis. Fusce
-          augue diam, sagittis nec posuere at, consectetur tempor lectus. Nulla at lectus eget mauris iaculis malesuada
-          mollis sed neque. Curabitur et risus tristique, malesuada mauris finibus, elementum massa. Proin lacinia
-          mauris quis ligula blandit ullamcorper. Donec ut posuere lorem. In volutpat magna vitae tellus posuere
-          pulvinar. Nam varius ligula justo, nec placerat lacus pharetra ac. Aenean massa orci, tristique in nisl ut,
-          aliquet consectetur libero. Etiam luctus placerat vulputate. Aliquam ipsum massa, porttitor at mollis ut,
-          pretium sit amet mi. In neque mauris, placerat et neque vel, tempor interdum dolor. Suspendisse gravida
-          malesuada tellus, vel dapibus nisl dignissim vel. Cras ut nulla sit amet erat malesuada euismod vel a nulla.
-        </p>
-        <p>
-          Phasellus sit amet iaculis odio, eget feugiat erat. Etiam sit amet turpis sit amet massa viverra maximus.
-          Aenean venenatis porttitor pharetra. Fusce vulputate urna purus, vel efficitur mauris auctor non. Etiam libero
-          odio, sodales in velit a, faucibus venenatis erat. Ut convallis sit amet urna in ultrices. Cras neque est,
-          vehicula sed lorem ac, placerat commodo elit. Praesent turpis metus, elementum eget iaculis ac, elementum in
-          odio. Nunc et elit faucibus, condimentum mauris consequat, ornare dolor. Sed ac lectus a est blandit tempor.
-          Etiam lobortis tristique maximus.
-        </p>
-        <p>
-          Quisque tempus porttitor massa, vel condimentum risus finibus a. Aliquam viverra maximus odio, id ornare justo
-          tristique ac. Mauris euismod arcu eget neque sagittis rutrum. Ut vehicula porta lacus nec lobortis. Vestibulum
-          et elit ultrices, lacinia metus in, lobortis est. Vivamus nisi justo, venenatis sit amet arcu ac, congue
-          faucibus justo. Duis volutpat posuere enim, vel sagittis elit dictum et. Sed et congue mauris. Nam venenatis
-          venenatis risus, ac condimentum neque sagittis sed. In eget nulla ultricies urna sollicitudin posuere. Aenean
-          sagittis congue mauris. Proin nec libero mi. In hac habitasse platea dictumst. Praesent nunc nulla, dictum id
-          molestie sed, pretium vitae turpis.
-        </p>
-        <p>
-          Pellentesque vitae dapibus lacus. Nullam suscipit ornare risus quis ullamcorper. Nullam feugiat, sapien et
-          sodales fermentum, risus ligula semper risus, id efficitur ligula augue id diam. Suspendisse lobortis est sit
-          amet quam facilisis, ut vestibulum nunc dignissim. Donec at vestibulum magna. Maecenas maximus pretium metus.
-          Phasellus congue sapien vel odio imperdiet, nec mollis odio euismod. Sed vel eros ut sapien accumsan
-          condimentum vehicula vitae lectus. Donec sed efficitur lorem. Aenean tristique mi libero, eleifend tincidunt
-          libero finibus at. Mauris condimentum fermentum rutrum.
-        </p>
-        <p>
-          Nulla tristique ultricies suscipit. Donec non ornare elit. Vivamus id pretium mauris, nec sagittis leo. Fusce
-          mattis eget est id sollicitudin. Suspendisse dictum sem magna, in imperdiet metus suscipit et. Suspendisse
-          enim enim, venenatis et orci eu, suscipit congue lacus. Praesent vel ligula non eros tempor interdum. Proin
-          justo orci, ultricies vitae diam sed, semper consectetur ligula. Aenean finibus ante velit, nec efficitur
-          libero cursus cursus. Duis mi nunc, imperdiet sed condimentum vel, porttitor ut lacus. Quisque dui ipsum,
-          vehicula sed vestibulum id, semper vel libero. Suspendisse tincidunt mollis condimentum. Nulla facilisi. Etiam
-          neque nisl, egestas nec iaculis sed, tristique faucibus sem. Sed mollis dui quis ligula cursus rutrum.
-        </p>
-        </div>
+    
     </IonContent>
   </IonPage>
-);
+)};
 
 export default Tab1;

@@ -7,16 +7,12 @@ const Tab0: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar color={'success'}>
-          <IonTitle>BeCool Travels</IonTitle>
+          <IonTitle class='ion-color-success-shade'>
+            BeCool Travels</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="We are BeCool Travel app." />
+        
       </IonContent>
     </IonPage>
   );
