@@ -48,24 +48,44 @@ const Tab1: React.FC = () => {
       
     </IonModal>
     <IonModal ref={modal} trigger="open-modal2" initialBreakpoint={1} breakpoints={[0, 1]}>
-      <div className="block">
-        
+      <div className="" style={{padding:'10px'}}>
+      <img alt="Silhouette of mountains" src="https://albay.gov.ph/wp-content/uploads/2021/04/EASTCOAST-FULL-scaled.jpg" />
         <p>The province is generally mountainous with scattered fertile plains and valleys. Aside from Mayon Volcano, it has two other major peaks: Mount Masaraga and Mount Malinao.
 
         The western coast of the province is mountainous but not as prominent as the eastern range with the highest elevation at around 490 meters (1,610 ft.). Among these mountains are Mount Catburawan in Ligao and Mount Pantao in Oas & Libon.</p>
       </div>
     </IonModal>
     <IonModal ref={modal} trigger="open-modal3" initialBreakpoint={1} breakpoints={[0, 1]}>
-      <div className="block">
+      <div className="">
         <img
-          src="https://res.klook.com/image/upload/c_fill,w_750,h_560/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/lkrts1fjoxp0q1hivhr8.jpg"
+          src="https://play-lh.googleusercontent.com/3cyOfrGeCTEQPkwvn7JqvV1Kn0vyOMRRgFUMH-RaGly78gfQ5JwhFMGpJLF8ykoGENg"
           alt="The Wisconsin State Capitol building in Madison, WI at night"
           className=''
         ></img>
+        <p style={{padding: '10px'}}>
+<b>1.)</b> Mayon Volcano is an active volcano famous for its almost perfect cone shape. The cone is considered to be the world's most perfectly-formed volcano for its symmetry.
+<br></br>
+<br></br>
+<b>2.)</b> Mayon Volcano is the iconic landmark of Albay province. It has an elevation of 2,463 meters.
+<br></br>
+<br></br>
+
+<b>3.)</b> Mayon Volcano is the Philippines’ most active volcano with a recorded eruption of 48 times within a span of 400 years. The very first recorded eruption of the volcano was in February 1616.
+<br></br>
+<br></br>
+
+<b>4.)</b> The mountain is a national park and a protected landscape and was proclaimed in 2000 as Mayon Volcano Natural Park.
+<br></br>
+<br></br>
+
+<b>5.)</b> In the Bicol dialect it is called Bulkang Magayon which means Beautiful Volcano in English. It was named after the legendary heroine Daragang Magayon or Beautiful Lady.</p>
       </div>
     </IonModal>
     <IonModal ref={modal} trigger="open-modal4" initialBreakpoint={1} breakpoints={[0, 1]}>
-      <div className="block">
+      <div className="" style={{padding:'10px'}}>
+      <div  style={{paddingLeft:'60px'}}>
+      <img alt="Silhouette of mountains" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Ph_locator_albay_legazpi.png/250px-Ph_locator_albay_legazpi.png" />
+      </div>
       <p><b>Bicol Region</b> is composed of four contiguous provinces: <b>Albay, Camarines Sur, Camarines Norte, and Sorsogon</b>; two island provinces of Catanduanes and Masbate; and seven cities namely, Legazpi, Naga, Iriga, Tabaco, Ligao, Sorsogon, and Masbate.</p>
       
       </div>
