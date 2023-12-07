@@ -1,5 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
+  IonAlert,
   IonApp,
   IonIcon,
   IonLabel,
@@ -7,7 +8,8 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  setupIonicReact
+  setupIonicReact,
+  useIonAlert
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { airplaneOutline, atOutline, homeOutline, mailOutline, peopleOutline } from 'ionicons/icons';
@@ -34,51 +36,61 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import TabMain from './pages/TabMain';
+import { useState } from 'react';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/tab0">
-            <Tab0 />
-          </Route>
-          <Route exact path="/tab1">
-            <Tab1 />
-          </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/tab0" />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab0" href="/tab0">
-            <IonIcon aria-hidden="true" icon={homeOutline} />
-            <IonLabel>Home</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={peopleOutline} />
-            <IonLabel>About</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={airplaneOutline} />
-            <IonLabel>Tourist Spots</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={mailOutline} />
-            <IonLabel>Contact Us</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState()
+  console.log(window.location.pathname, 'asdf')
+  return (
+    
+    <IonApp>
+      <IonReactRouter>
+      {window.location.pathname != '/' ? (
+        <IonTabs>
+          <IonRouterOutlet>
+            <Route exact path="/tab0">
+              <Tab0 />
+            </Route>
+            <Route exact path="/tab1">
+              <Tab1 />
+            </Route>
+            <Route exact path="/tab2">
+              <Tab2 />
+            </Route>
+            <Route path="/tab3">
+              <Tab3 />
+            </Route>
+            <Route exact path="/">
+              <TabMain/>
+            </Route>
+          </IonRouterOutlet>
+            
+          <IonTabBar slot="bottom">
+            <IonTabButton tab="tab0" href="/tab0">
+              <IonIcon aria-hidden="true" icon={homeOutline} />
+              <IonLabel>Home</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab1" href="/tab1">
+              <IonIcon aria-hidden="true" icon={peopleOutline} />
+              <IonLabel>About</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab2" href="/tab2">
+              <IonIcon aria-hidden="true" icon={airplaneOutline} />
+              <IonLabel>Tourist Spots</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab3" href="/tab3">
+              <IonIcon aria-hidden="true" icon={mailOutline} />
+              <IonLabel>Contact Us</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+        </IonTabs>
+        ) : <TabMain></TabMain>}
+      </IonReactRouter>
+    </IonApp>
+  )
+};
 
 export default App;

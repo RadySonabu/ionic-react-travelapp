@@ -36,16 +36,23 @@ const Tab1: React.FC = () => {
     </IonButton>
     <IonModal ref={modal} trigger="open-modal" initialBreakpoint={1} breakpoints={[0, 1]}>
       <div className="block">
-      The province of Albay is located in the Bicol region of the Philippines. It is the capital of Legazpi. The province contains one of the finest scenery in the world, particularly its famous Mayon Volcano, which is renowned for its cone-perfect shape. Mayon is a major tourist attraction and an active stratovolcano. The islands of Albay are characterized by splendid greenness, natural wonders, and glorious beaches along their coast. There is a rich cultural heritage in this province, where many festivals are held throughout the year. In particular, the Magayon Festival pays tribute to the beauty of the Mayon Volcano, which is a major cultural event for the people of Albay. In economic terms, Albay is primarily an agricultural area, with rice, coconut, and abaca being some of the main crops. Due to its location on the coast of the province, fishing is also an important sector.
+      <div>The province of <b>Albay</b> is located in the <b>Bicol</b> region of the Philippines. It is the capital of Legazpi. The province contains one of the finest scenery in the world, particularly its famous <b>Mayon Volcano</b>, which is renowned for its cone-perfect shape. Mayon is a major tourist attraction and an active stratovolcano.
+      <br></br>
+      <br></br>
+       The islands of Albay are characterized by splendid <b>greenness, natural wonders, and glorious beaches</b> along their coast. There is a rich cultural heritage in this province, where many festivals are held throughout the year. In particular, the Magayon Festival pays tribute to the beauty of the Mayon Volcano, which is a major cultural event for the people of Albay. 
+       <br></br>
+       <br></br>
+       In economic terms, Albay is primarily an agricultural area, with <b>rice, coconut, and abaca</b> being some of the main crops. Due to its location on the coast of the province, fishing is also an important sector.</div>
+      
       </div>
+      
     </IonModal>
     <IonModal ref={modal} trigger="open-modal2" initialBreakpoint={1} breakpoints={[0, 1]}>
       <div className="block">
-        <img
-          src="https://res.klook.com/image/upload/c_fill,w_750,h_560/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/lkrts1fjoxp0q1hivhr8.jpg"
-          alt="The Wisconsin State Capitol building in Madison, WI at night"
-          className=''
-        ></img>
+        
+        <p>The province is generally mountainous with scattered fertile plains and valleys. Aside from Mayon Volcano, it has two other major peaks: Mount Masaraga and Mount Malinao.
+
+        The western coast of the province is mountainous but not as prominent as the eastern range with the highest elevation at around 490 meters (1,610 ft.). Among these mountains are Mount Catburawan in Ligao and Mount Pantao in Oas & Libon.</p>
       </div>
     </IonModal>
     <IonModal ref={modal} trigger="open-modal3" initialBreakpoint={1} breakpoints={[0, 1]}>
@@ -59,7 +66,8 @@ const Tab1: React.FC = () => {
     </IonModal>
     <IonModal ref={modal} trigger="open-modal4" initialBreakpoint={1} breakpoints={[0, 1]}>
       <div className="block">
-      <p>Bicol Region is composed of four contiguous provinces: Albay, Camarines Sur, Camarines Norte, and Sorsogon; two island provinces of Catanduanes and Masbate; and seven cities namely, Legazpi, Naga, Iriga, Tabaco, Ligao, Sorsogon, and Masbate.</p>
+      <p><b>Bicol Region</b> is composed of four contiguous provinces: <b>Albay, Camarines Sur, Camarines Norte, and Sorsogon</b>; two island provinces of Catanduanes and Masbate; and seven cities namely, Legazpi, Naga, Iriga, Tabaco, Ligao, Sorsogon, and Masbate.</p>
+      
       </div>
     </IonModal>
     
